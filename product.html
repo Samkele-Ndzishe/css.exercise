@@ -15,98 +15,119 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <header class="hero" id="Home">
+    <header class="hero" id="home">
         <div class="hero-content">
-            <h1> We sell Best Merchandise</h1>
-            <p>cool design, cutting edge performance and  get 500 Million Beers off your First order!!! </p>
+            <h1>We sell the best merchandise</h1>
+            <p>Cool designs, cutting-edge performance, and a great selection of collectibles.</p>
         </div>
     </header>
     <main>
-        <div class="title1">
-        <h2>Featured Products</h2>
-        <p>Handpicked items crafted with precision and style</p>
-        </div>
+        <section class="products-section" id="products" aria-labelledby="products-title">
+            <div class="title1" id="features">
+                <h2 id="products-title">Featured Products</h2>
+                <p>Handpicked items crafted with precision and style.</p>
+            </div>
         
          <div class="products-grid">
             <div class="product-card" style="--delay: 0.1s;">
                 <div class="card-img-container">
-                    <img src="images/img (5).jpg">
+                    <img src="images/img (5).jpg" alt="Sonic Pro wireless headphones">
                 </div>
                 <div class="card-body">
                     <h3>Sonic Pro Wireless</h3>
                     <p>High-fidelity active noise-canceling headphones with spatial audio.</p>
                     <div class="card-footer">
                         <span class="price">R2000</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
 
             <div class="product-card" style="--delay: 0.2s;">
                 <div class="card-img-container">
-                    <img src="images/img (2).jpg">
+                    <img src="images/img (2).jpg" alt="Mr Stud Implant product">
                 </div>
                 <div class="card-body">
                     <h3>Mr Stud Implant</h3>
                     <p>Design to provide Long lasting stamina</p>
                     <div class="card-footer">
                         <span class="price">R900</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
              <div class="product-card" style="--delay: 0.3s;">
                 <div class="card-img-container">
-                    <img src="images/img (6).jpg">
+                    <img src="images/img (6).jpg" alt="Power Rangers Morpher">
                 </div>
                 <div class="card-body">
                     <h3>Power Rangers Morpher</h3>
                     <p>Iconic belt buckle gives power ranger access to costume along with enhanced abilities</p>
                     <div class="card-footer">
                         <span class="price">R200000</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
              <div class="product-card" style="--delay: 0.4s;">
                 <div class="card-img-container">
-                    <img src="images/BAT.jpg">
+                    <img src="images/BAT.jpg" alt="Batman cowl">
                 </div>
                 <div class="card-body">
                     <h3>Batmans cowl</h3>
                     <p>its just the cowl.</p>
                     <div class="card-footer">
                         <span class="price">R100</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
              <div class="product-card" style="--delay: 0.5s;">
                 <div class="card-img-container">
-                    <img src="images/img (4).jpg">
+                    <img src="images/img (4).jpg" alt="Super Soldier serum">
                 </div>
                 <div class="card-body">
                     <h3>Super Soldier serum</h3>
                     <p>You either get john walker or Sentry abilities</p>
                     <div class="card-footer">
                         <span class="price">R50000</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
              <div class="product-card" style="--delay: 0.6s;">
                 <div class="card-img-container">
-                    <img src="images/img (1).jpg">
+                    <img src="images/img (1).jpg" alt="A slipper, the ultimate fictional knockout">
                 </div>
                 <div class="card-body">
                     <h3>Moms Slipper</h3>
                     <p>Just K.O all Fiction</p>
                     <div class="card-footer">
                         <span class="price">R1000000</span>
-                        <button class="pulse-btn">Add to Cart</button>
+                        <button class="pulse-btn" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>
+         </div>
+        </section>
     </main>
+    <footer id="contact">
+        <p>Contact us with questions about our featured products.</p>
+    </footer>
+    <script>
+        const cartCount = document.getElementById('cartCount');
+        let itemsInCart = 0;
+
+        document.querySelectorAll('.pulse-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                itemsInCart += 1;
+                cartCount.textContent = itemsInCart;
+                button.textContent = 'Added';
+                window.setTimeout(() => {
+                    button.textContent = 'Add to Cart';
+                }, 1200);
+            });
+        });
+    </script>
 </body>
 </html>
